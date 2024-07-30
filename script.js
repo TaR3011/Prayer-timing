@@ -1,4 +1,4 @@
-// const { default: axios } = require("axios");
+const { default: axios } = require("axios");
 
 const prayers = document.getElementsByClassName("prayer_time");
 const hDate = document.getElementById("hDate");
