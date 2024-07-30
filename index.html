@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main_container">
+      <!-- CITY AND DATE -->
+      <div id="CD_container">
+        <h1 id="city">الرياض</h1>
+        <h5 class="date" id="date">
+          التاريخ الهجري :
+          <span id="hDate"></span>
+        </h5>
+        <h5 class="date">
+          التاريخ الميلادي :
+          <span id="mDate"></span>
+        </h5>
+      </div>
+
+      <!-- TIMES -->
+      <div id="times_container">
+        <!-- TIME -->
+        <div class="time">
+          <h6 class="prayer_name">الفجر</h6>
+          <h6 class="prayer_time" id="fajr_time"></h6>
+        </div>
+        <div class="time">
+          <h6 class="prayer_name">الشروق</h6>
+          <h6 class="prayer_time" id="sunrise_time"></h6>
+        </div>
+        <div class="time">
+          <h6 class="prayer_name">الظهر</h6>
+          <h6 class="prayer_time" id="duhuir_time"></h6>
+        </div>
+        <div class="time">
+          <h6 class="prayer_name">العصر</h6>
+          <h6 class="prayer_time" id="asr_time"></h6>
+        </div>
+        <div class="time">
+          <h6 class="prayer_name">المغرب</h6>
+          <h6 class="prayer_time" id="magrib_time"></h6>
+        </div>
+        <div class="time">
+          <h6 class="prayer_name">العشاء</h6>
+          <h6 class="prayer_time" id="isha_time"></h6>
+        </div>
+      </div>
+    </div>
+    <!-- COLOCK -->
+    <div id="clock"></div>
+    <!-- SELECTION -->
+    <div id="selection">
+      <div id="select_country">
+        <label for="country" class="select_lable">الدولة : </label>
+        <select id="countries"></select>
+      </div>
+      <div id="select_city">
+        <label for="city" class="select_lable">المدينة : </label>
+        <select id="cities"></select>
+      </div>
+    </div>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

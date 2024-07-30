@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  direction: rtl;
+  /* background-color: #f1faf7; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+:root {
+  --mainColor: #099268;
+  --textColor: #087f5b;
+}
+#main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, #82fdd4, #087f5b);
+  gap: 24px;
+}
+
+h1,
+h5 {
+  color: aliceblue;
+  margin: 0 64px;
+}
+
+#city {
+  font-size: 64px;
+  text-align: center;
+  margin: 32px 64px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid aliceblue;
+}
+
+.date {
+  margin: 12px 64px;
+  font-size: 16px;
+}
+
+#mDate,
+#hDate {
+  font-size: 18px;
+}
+
+#times_container {
+  display: flex;
+  margin: 0 68px;
+  gap: 12px;
+  justify-content: center;
+  /* justify-content: space-around; */
+}
+
+.time {
+  border: 3px solid aliceblue;
+  box-shadow: 2px 8px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 120px;
+  height: 120px;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.time:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.prayer_name {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+.prayer_time {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+#clock {
+  font-size: 28px;
+  color: aliceblue;
+  font-weight: 600;
+  position: absolute;
+  top: 24px;
+  left: 38px;
+}
+
+/***** SELECTION *****/
+#selection {
+  display: flex;
+  justify-content: flex-start;
+  gap: 28px;
+  position: absolute;
+  top: 24px;
+  right: 38px;
+}
+
+.select_lable {
+  font-size: 18px;
+  color: aliceblue;
+}
+
+select {
+  background: none;
+  border: 3px solid aliceblue;
+  border-radius: 12px;
+  width: 138px;
+  padding: 2px 12px;
+  color: aliceblue;
+  font-size: 16px;
+  font-size: 600;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+option {
+  color: black;
+}
+
+@media screen and (max-width: 1050px) {
+  #city {
+    margin-top: 72px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #city {
+    margin: 18px 12px;
+    margin-top: 72px;
+    font-size: 48px;
+  }
+  #mDate,
+  #hDate {
+    font-size: 18px;
+  }
+
+  #selection {
+    gap: 8px;
+  }
+
+  select {
+    width: 112px;
+  }
+
+  .time {
+    height: 92px;
+    width: 92px;
+    padding-bottom: 4px;
+  }
+
+  .prayer_name,
+  .prayer_time {
+    font-size: 22px;
+  }
+
+  #times_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+
+  #clock {
+    top: 78px;
+    left: 18px;
+  }
+
+  #selection {
+    right: 18px;
+    padding-left: 18px;
+  }
+}
